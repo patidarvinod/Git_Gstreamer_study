@@ -112,8 +112,8 @@ $git add smaple.c
 
 git:
 https://github.com/
-username: patidarvinod
-password: patidarvinod4
+
+
 =================================
 gerrit:
 ------
@@ -121,9 +121,6 @@ gerrit:
 
 1)https://wikitech.wikimedia.org/wiki/Main_Page
 2)https://gerrit.wikimedia.org/r/#/c/321602/
-username: patidarvinod
-password: patidarvinod4
-
 
 http://docs.openstack.org/infra/manual/developers.html
 
