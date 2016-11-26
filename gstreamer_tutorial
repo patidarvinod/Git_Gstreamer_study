@@ -1,0 +1,412 @@
+
+environment:
+export PKG_CONFIG_PATH=<>/lib/pkgconfig
+export LD_LIBRARY_PATH=<>/lib
+export PATH=$PATH:<>/bin
+
+
+build tools required items
+1.bison : apt-get install bison
+2.flex : apt-get install flex
+3.zlib : sudo apt-get install zlib1g-dev
+4.libffi : apt-get install libffi-dev
+5.LIBMOUNT libmount: apt-get install libmount-dev
+6.libpcre : apt-get install libpcre3 libpcre3-dev
+7.glib- latest one using source code
+-https://ftp.gnome.org/pub/gnome/sources/glib/2.51.0
+
+#######
+http://stackoverflow.com/questions/7669240/webcam-streaming-using-gstreamer-over-udp
+
+Awesome working############################
+gstreamer 1.10.0
+
+-----v4l2 and gstreamer----
+https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-v4l2src.html
+#gst-launch-1.0 v4l2src ! xvimagesink
+#
+apt-get install libxv-dev
+libxv-dev
+
+#############################
+
+
+
+#for x11-dev and alsa
+http://www.stchman.com/alsa_update.html
+
+-gstreamer
+
+-base plaugin
+---------
+mer-plugins-base-uninstalled.pc
+
+configure: *** Plug-ins without external dependencies that will be built:
+	adder
+	app
+	audioconvert
+	audiorate
+	audioresample
+	audiotestsrc
+	encoding
+	gio
+	playback
+	subparse
+	tcp
+	typefind
+	videoconvert
+	videorate
+	videoscale
+	videotestsrc
+	volume
+
+configure: *** Plug-ins without external dependencies that will NOT be built:
+
+configure: *** Plug-ins that have NOT been ported:
+
+configure: *** Plug-ins with dependencies that will be built:
+
+configure: *** Plug-ins with dependencies that will NOT be built:
+	 
+	alsa
+	cdparanoia
+	ivorbisdec
+	libvisual
+	ogg
+	opus
+	pango
+	theora
+	vorbis
+	ximagesink
+	xvimagesink
+
+configure: *** Orc acceleration disabled.  Requires Orc >= 0.4.24, which was
+               not found.  Slower code paths will be used.
+
+
+=====================================
+Good plugins
+=================================
+
+
+
+configure: *** Plug-ins without external dependencies that will be built:
+	alpha
+	apetag
+	audiofx
+	audioparsers
+	auparse
+	autodetect
+	avi
+	cutter
+	debugutils
+	deinterlace
+	dtmf
+	effectv
+	equalizer
+	flv
+	flx
+	goom
+	goom2k1
+	icydemux
+	id3demux
+	imagefreeze
+	interleave
+	isomp4
+	law
+	level
+	matroska
+	multifile
+	multipart
+	replaygain
+	rtp
+	rtpmanager
+	rtsp
+	shapewipe
+	smpte
+	spectrum
+	udp
+	videobox
+	videocrop
+	videofilter
+	videomixer
+	wavenc
+	wavparse
+	y4m
+
+configure: *** Plug-ins without external dependencies that will NOT be built:
+	monoscope
+
+configure: *** Plug-ins that have NOT been ported:
+
+configure: *** Plug-ins with dependencies that will be built:
+	oss4
+	ossaudio
+	video4linux2
+
+configure: *** Plug-ins with dependencies that will NOT be built:
+	1394
+	aasink
+	cacasink
+	cairo
+	directsoundsink
+	dv
+	flac
+	gdkpixbuf
+	jack
+	jpeg
+	osxaudio
+	osxvideosink
+	png
+	pulseaudio
+	shout2
+	souphttpsrc
+	speex
+	sunaudio
+	taglib
+	vpx
+	waveformsink
+	wavpack
+	ximagesrc
+
+configure: *** Orc acceleration disabled.  Requires Orc >= 0.4.17, which was
+               not found.  Slower code paths will be used.
+
+
+====================================================================
+Bad plugin
+====================================================================
+
+configure: *** Plug-ins without external dependencies that will be built:
+	accurip
+	adpcmdec
+	adpcmenc
+	aiff
+	asfmux
+	audiofxbad
+	audiomixer
+	audiovisualizers
+	autoconvert
+	bayer
+	camerabin2
+	coloreffects
+	compositor
+	dataurisrc
+	debugutils
+	dvbsuboverlay
+	dvdspu
+	festival
+	fieldanalysis
+	freeverb
+	frei0r
+	gaudieffects
+	gdp
+	geometrictransform
+	id3tag
+	inter
+	interlace
+	ivfparse
+	ivtc
+	jp2kdecimator
+	jpegformat
+	librfb
+	midi
+	mpegdemux
+	mpegpsmux
+	mpegtsdemux
+	mpegtsmux
+	mxf
+	netsim
+	onvif
+	pcapparse
+	pnm
+	rawparse
+	removesilence
+	sdp
+	segmentclip
+	siren
+	smooth
+	speed
+	stereo
+	subenc
+	timecode
+	videofilters
+	videoframe_audiolevel
+	videoparsers
+	videosignal
+	vmnc
+	y4m
+	yadif
+
+configure: *** Plug-ins without external dependencies that will NOT be built:
+	cdxaparse
+	dccp
+	faceoverlay
+	hdvparse
+	mve
+	nuvdemux
+	patchdetect
+	sdi
+	tta
+	videomeasure
+
+configure: *** Plug-ins that have NOT been ported:
+	apexsink
+	cdxaparse
+	dccp
+	faceoverlay
+	hdvparse
+	libvisual
+	linsys
+	mve
+	nas
+	nuvdemux
+	patchdetect
+	sdi
+	sdl
+	sndio
+	timidity
+	tta
+	videomeasure
+	wininet
+	xvid
+
+configure: *** Plug-ins with dependencies that will be built:
+	decklink
+	dvb
+	fbdevsink
+	shm
+	vcdsrc
+
+configure: *** Plug-ins with dependencies that will NOT be built:
+	acm
+	androidmedia
+	apexsink
+	applemedia
+	assrender
+	avcsrc
+	bluez
+	bs2b
+	bz2
+	chromaprint
+	curl
+	daala
+	dash
+	dc1394
+	dfbvideosink 
+	direct3dsink
+	directsoundsrc
+	dtls
+	dtsdec
+	faac
+	faad
+	fdkaac
+	flite
+	fluidsynth
+	gl
+	gme
+	gsmenc gsmdec
+	gtk
+	hls
+	kate
+	kms
+	ladspa
+	libde265
+	libmms
+	libvisual
+	linsys
+	lv2
+	mimic
+	modplug
+	mpeg2enc
+	mplex
+	musepack
+	nassink
+	neonhttpsrc
+	nvenc
+	ofa
+	openal
+	opencv
+	openexr
+	openh264
+	openjpeg
+	openni2
+	opensl
+	opus
+	pvr
+	qt
+	resindvd
+	rsvg
+	rtmp
+	sbc
+	schro
+	sdlvideosink sdlaudiosink
+	sfdec sfenc
+	smoothstreaming
+	sndio
+	soundtouch
+	spandsp
+	spc
+	srtp
+	teletextdec
+	timidity
+	tinyalsa
+	uvch264
+	vdpau
+	vo-aacenc
+	vo-amrwbenc
+	vulkan
+	wasapi
+	wayland 
+	webp 
+	webrtcdsp
+	wildmidi
+	wininet
+	winks
+	winscreencap
+	x265
+	xvid
+	zbar
+
+configure: *** Orc acceleration disabled.  Requires Orc >= 0.4.17, which was
+               not found.  Slower code paths will be used.
+
+
+
+===================================================================
+uglyplugin
+================================================================
+onfigure: *** Plug-ins without external dependencies that will be built:
+	asfdemux
+	dvdlpcmdec
+	dvdsub
+	realmedia
+	xingmux
+
+configure: *** Plug-ins without external dependencies that will NOT be built:
+
+configure: *** Plug-ins that have NOT been ported:
+
+configure: *** Plug-ins with dependencies that will be built:
+
+configure: *** Plug-ins with dependencies that will NOT be built:
+	a52dec
+	amrnb
+	amrwbdec
+	cdio
+	dvdreadsrc
+	lame
+	mad
+	mpeg2dec
+	mpg123
+	sid
+	twolame
+	x264
+
+
+
+
+
+
+
+

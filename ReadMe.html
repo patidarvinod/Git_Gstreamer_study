@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>   
+ <head>
+  <meta charset="utf-8">
+  <title>AGL:Gstreamer</title>
+  <style>
+	table, th, td {
+	    border: 1px solid black;
+	}
+	th, td {
+	    padding: 5px;
+	    text-align: left;
+	}
+   </style>
+ </head>
+ <body>
+ <h2> Gstreamer Basics</h2>
+ <a href="http://gstreamer.com/">Gstreamer Home</a> <p></p>
+ <a href="https://gstreamer.freedesktop.org/documentation/">Documents and Tutorials</a><p></p>
+ <a href="https://gstreamer.freedesktop.org/data/doc/gstreamer/head/manual/html/section-checklist-debug.html>Tutortial-debug"</a><p></p>
+ <h2> Pre-requisite</h2>
+<a href="http://library.gnome.org/devel/glib/stable/"> 1. Basics of glib</a><p></p>
+<a href="http://library.gnome.org/devel/gobject/stable/">  2. Basics of GObject</a><p></p>
+<a href="https://developer.gnome.org/gobject/stable/pt02.html">  3. GObject Tutorial</a>
+ <h2> Tutorials </h2>
+<a href="http://docs.gstreamer.com/display/GstSDK/Tutorials"> Gstreamer SDK Tutorials</a>
+<p></p>
+<h2> AGL_gst: Gstreamer for AGL</h2>
+<a href="https://download.automotivelinux.org/AGL/release/albacore/latest/qemux86/deploy/sources/i586-poky-linux/gstreamer1.0-1.4.1-r0/">Gstreamer patch for AGL</a>
+<p></p>
+<h2>Download gStreamer codebase</h2><a href="https://gstreamer.freedesktop.org/src/gstreamer/">src</a>
+<p></p>
+<table>
+<caption><b>Gstreamer OpenMax links</b></caption>
+<tr><td>1</td><td>Release Notes</td><td><a href="https://gstreamer.freedesktop.org/releases/gst-omx/1.0.0.html">1.0.0</a></td></tr>
+<tr><td>2</td><td>Source </td><td><a href="https://gstreamer.freedesktop.org/src/gst-omx/">Download</a></td></tr>
+<tr><td>3</td><td>Wiki @freedesktop</td><td><a href="https://www.freedesktop.org/wiki/GstOpenMAX/">wikiLink</a></td></tr>
+<tr><td>4</td><td>Document by Nokia</td><td><a href="http://elinux.org/images/e/e0/Gst-openmax.pdf">Gst-openmax.pdf</a></td></tr>
+<tr><td>5</td><td>Document by ST@khornos</td><td><a href="http://www.khronos.org/files/openmax/whitepapers/OpenMAX_IL_with_GSstreamer.pdf">OpenMAX_IL_with_GSstreamer.pdf</a></td></tr>
+<tr><td>6</td><td>Document by ST@khornos</td><td><a href="http://raspberrypi.stackexchange.com/questions/528/how-can-i-install-gstreamer-gst-omx">Installing GstOMX</a></td></tr>
+</table>
+<p></p><p></p>
+
+<table style="border: 1px solid black;"> 
+<caption><b>Important Audio Links</b></caption>  
+     <tr><td><b>S.No.</b></td>
+         <td><b>Content</b></td>
+         <td></b>Link</b></td>
+     </tr>
+     <tr><td>1</td>
+         <td>ALSA Project Status Update</td>
+         <td><a href="https://gstreamer.freedesktop.org/data/events/gstreamer-conference/2012/gsc2012_alsa.pdf">Presentation Gst conference 2012</a></td>
+     </tr>
+     <tr><td>2</td>
+         <td>Tiny compress source code  <p style="color:red">git clone git://gitz01/cm/download/tinycompress.git</p></td>
+         <td><a href="http://git.alsa-project.org/?p=tinycompress.git;a=summary">Git repo</a></td>
+     </tr>
+     <tr><td>3</td>
+         <td>Tiny Compress GST links</td>
+         <td> <!-- Provide line by line links-->
+             <a href="http://gstreamer-devel.966125.n4.nabble.com/ALSA-Compress-Offload-support-td4670153.html">QA gst compressed alsa support</a><p></p>
+             <a href="https://cgit.freedesktop.org/gstreamer/gst-plugins-base/tree/ext/alsa/gstalsasink.c">Example Plugin Code</a>
+         </td>
+     </tr>
+</table>
+
+<table style="border: 1px solid black;"> 
+<caption><b>GST Installation issues and Solution</b></caption>  
+  <tr><td><b>S.No.</b></td>
+      <td><b>Issue</b></td>
+      <td><b>Solution</b></td>
+      <td></b>Link</b></td>
+  </tr>
+  <tr><td>1</td>
+      <td>./Configure failed for few components: "e.g alsa, theora in base Plugins"
+          <p>*** Plug-ins with dependencies that will NOT be built:</p>  </td>
+      <td>Install the required dependencies: "e.g.  sudo apt-get install libasound2-dev" </td>
+      <td>LinkTODO</td>
+  </tr>
+<!--- +ADD A row with following template+---
+      <tr><td>N+1</td>
+          <td>Issue</td>
+          <td>Solution</td>
+      </tr>
+-------------------------------------->
+</table>
+</body>
+</html> 

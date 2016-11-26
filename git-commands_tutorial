@@ -1,0 +1,168 @@
+ ###git and gerrit workflow:
+
+A)If repo is availabe on remote github then
+
+1. clone then remote repo into local machine: 
+git clone  https://github.com/patidarvinod/OneRepo
+
+2. Always recommendaded to create branch and update your changes there
+   after review you should push into github.
+
+  -git status
+  -git branch -a [to display information about branches]
+	----------------------------------------
+	 output:
+	   * master
+	  remotes/origin/HEAD -> origin/master
+	  remotes/origin/master
+	 * is represent current working branch.
+	----------------------------------------
+   -git branch MyBranch [create a branch to work]
+   -git checkout MyBranch [to switch current working branch]
+	----------------------------------------
+	 output:
+	   *MyBranch
+	   * master
+	  remotes/origin/HEAD -> origin/master
+	  remotes/origin/master
+	 * is represent current working branch.
+	----------------------------------------
+    -update your changes into branch
+    -git add hello.c
+    -git commit -m "commiting changes"
+
+   Now changes should be merged into master .
+    -git checkout master
+    -git merge MyBranch
+
+     now all hte changes are availabe into master of MyBranch.
+     now if we want ot delete the master we can delete.
+     -git branch -d MyBranch
+
+    Note:
+   	----------------------------------------
+     iF we want to revert the changes by one then.
+    -git reset --hard HEAD~1
+
+	----------------------------------------
+
+   After merging if we want ot push all changes into remote repo then
+   first we should use pull to update with latest code base and then push.
+
+   -git pull origin master 
+      [pulling changes from origin to master branch e.g pull origin MyBranch]
+   -git push  <REMOTENAME> <BRANCHNAME> 
+   -git push origin master
+
+  if we want to rename a branch
+   -git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME> 
+  if we want to push tag
+   -git push  <REMOTENAME> <TAGNAME> 
+
+
+B)A)If repo is availabe on local machine then
+Need To Try the same:
+-git remote add origin <remote repository URL>
+
+===========================================================
+***** Gerrit use:
+--git setting
+--gerrit setting
+  --https protocol
+  --ssh protocol (Key generation and adding into git for the same)
+ apt-get install git-review      
+ Usefull:
+http://docs.openstack.org/infra/manual/developers.html
+
+
+
+
+=======================================================
+1) install git on your ubuntu machine.
+
+$apt-get install git
+$which git
+$git --version
+
+2)configuration
+-system configuration
+-user configuration
+-project configuration
+
+as of now user configuration with below command
+
+$git config --global user.name "patidarvinod"
+$git config --global user.email "patidarvinod4@gmail.com"
+
+then .gitconfig file will be generated in home directory.
+
+
+3)Create a folder in your system. This will serve as a local repository which will later be pushed onto the GitHub website. Use the following command:
+
+$git init Mytest
+
+4)go into Mytest repo
+create files like README and c program and then add into git repo as below
+
+$git add README
+$git add smaple.c
+
+5)commit into git repo which is local.
+
+
+git:
+https://github.com/
+username: patidarvinod
+password: patidarvinod4
+=================================
+gerrit:
+------
+1)http://gerrithub.io/
+
+1)https://wikitech.wikimedia.org/wiki/Main_Page
+2)https://gerrit.wikimedia.org/r/#/c/321602/
+username: patidarvinod
+password: patidarvinod4
+
+
+http://docs.openstack.org/infra/manual/developers.html
+
+https://gerrit-review.googlesource.com/Documentation/user-upload.html#configure_ssh
+=====================================
+Gerrit::
+-------
+A)Below are the configuration for gerrit to work:
+
+user.name=patidarvinod
+user.email=patidarvinod4@gmail.com
+push.default=matching
+gitreview.username=patidarvinod
+gitreview.remote=origin
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=ssh://patidarvinod@review.gerrithub.io:29418/patidarvinod/FirstRepo
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+B)git clone ssh://patidarvinod@review.gerrithub.io:29418/patidarvinod/OneRepo
+C)update your changes and the 
+D)git add filename
+E)git commit -m "messages"
+F)git review
+===================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
